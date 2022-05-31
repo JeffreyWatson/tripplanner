@@ -6,28 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>tripplanner</title>
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <title>Trip Planner</title>
 </head>
 
-<body>
+<body class="bg-secondary">
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">tripplanner</span>
+        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt="" loading="lazy">
+        <span class="ms-2">Trip Planner</span>
       </a>
+      <div>
+        <form onsubmit="app.tripsController.addTrip()">
+          <div class="mb-1 d-flex flex-direction-row align-items-center justify-content-center">
+            <label for="newtrip" class="form-label">Plan your next trip!</label>
+            <input type="text" required="text" minlength="3" maxlength="15 characters" class="form-control me-1" id="" name="trip">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div id="app"></div>
+          <div id="trips">
+          </div>
+
+
+          <!-- Form Start -->
+          <!-- <form class="row g-3 d-flex justify-content-between">
+            <div class="col-1">
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-2">
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234zxoows">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St">
+            </div>
+            <div class="col-2">
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-1">
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-end mt-3">
+          <button type="submit" class="btn btn-primary">Add Reservation</button>
+        </div>
+        </form> -->
+          <!-- Form END -->
+
         </div>
       </div>
     </div>
@@ -38,11 +79,8 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
-    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js" integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 
